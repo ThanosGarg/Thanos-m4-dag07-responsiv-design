@@ -1,80 +1,91 @@
-# Dag 7 · Responsiv design
+# Day 7 · Responsive design
 
-*Modul 4, UI/UX & Frontendutveckling, Lexicon IT-Proffs*
+_Module 4, UI/UX & Frontend Development, Lexicon IT-Proffs_
 
-## Vad du ska göra idag
+## What you will do today
 
-Du gör hela sajten responsiv enligt *mobile first*, med brytpunkter vid 600 px och 900 px, och testar den i DevTools enhetsläge.
+You will make the entire site responsive using a _mobile-first_ approach, with breakpoints at 600 px and 900 px, and test it in DevTools device mode.
 
-## Bakgrund
+## Background
 
-Responsiv design betyder att samma sida fungerar på alla skärmar. **Mobile first** innebär att du skriver CSS för den minsta skärmen först, och lägger till mer med `@media (min-width: ...)` när det finns plats. Du har redan en bra grund eftersom du byggt layouten med flex och grid.
+Responsive design means that the same page works on all screen sizes. **Mobile first** means writing CSS for the smallest screen first, then adding more with `@media (min-width: ...)` when there is enough space. You already have a solid foundation because you built the layout with flex and grid.
 
-## Så arbetar du (samma som alltid)
+## How to work (the same as always)
 
-1. **Forka** dagens repo på GitHub (*Fork → Create fork*).
-2. **Klona din fork:** *Code → HTTPS → kopiera adressen*. I terminalen (Ctrl+ö i VS Code): `git clone <adressen>`. Öppna den nya mappen i VS Code och starta *Live Server*.
-3. **Gör uppgiften.** Spara och kontrollera i webbläsaren efter varje steg. Gör en commit efter varje avslutat steg: `git add .` och `git commit -m "Beskriv vad du gjorde"`.
-4. **Skicka upp** när du är klar: `git push`.
-5. **Lämna in i Microsoft Forms.**
+1. **Fork** today's repository on GitHub (_Fork → Create fork_).
+2. **Clone your fork:** _Code → HTTPS → copy the URL_. In the terminal (Ctrl+ö in VS Code): `git clone <url>`. Open the new folder in VS Code and start _Live Server_.
+3. **Complete the assignment.** Save and check in the browser after each step. Make a commit after each completed step: `git add .` and `git commit -m "Describe what you did"`.
+4. **Push** when you are done: `git push`.
+5. **Submit in Microsoft Forms.**
 
-Fastnar du: skriv ner exakt var och vad du försökt, och ta det först i nästa handledda pass.
+If you get stuck, write down exactly where you got stuck and what you have tried, and bring it up first in the next guided session.
 
-## Uppgiften steg för steg
+## The assignment step by step
 
-### Steg 1. Kontrollera viewport-taggen
+### Step 1. Check the viewport tag
 
-Båda HTML-filerna måste ha `<meta name="viewport" ...>`. Utan den fungerar inget av det du gör idag.
+Both HTML files must include `<meta name="viewport" ...>`. Without it, none of today's work will function as intended.
 
-### Steg 2. Testa i enhetsläget
+### Step 2. Test in device mode
 
-Öppna DevTools och klicka på enhetsikonen (Ctrl+Shift+M). Testa 360, 768 och 1280 px. Skriv ner tre saker som är fel eller trånga.
+Open DevTools and click the device icon (Ctrl+Shift+M). Test at 360, 768, and 1280 px. Write down three things that are wrong or cramped.
 
-### Steg 3. Skriv mobile first
+### Step 3. Write mobile-first CSS
 
-Se till att den grundläggande CSS:en (utan media query) ser bra ut på 360 px bredd: en kolumn, rimlig padding.
+Make sure the base CSS (without media queries) looks good at a width of 360 px: one column with appropriate padding.
 
-### Steg 4. Brytpunkt 1: 600 px
+### Step 4. Breakpoint 1: 600 px
 
-Lägg till `@media (min-width: 600px) { ... }`: mer `padding` i `main`, större hero-rubrik.
+Add `@media (min-width: 600px) { ... }`: more `padding` in `main` and a larger hero heading.
 
-### Steg 5. Brytpunkt 2: 900 px
+### Step 5. Breakpoint 2: 900 px
 
-Lägg till `@media (min-width: 900px) { ... }`: Om oss i två kolumner, bredare sidhuvud.
+Add `@media (min-width: 900px) { ... }`: an About Us section in two columns and a wider header.
 
-### Steg 6. Bilder och formulär
+### Step 6. Images and forms
 
-Kontrollera att inga bilder sticker ut och att formulärfälten inte är för breda eller smala på någon storlek.
+Check that no images overflow and that form fields are neither too wide nor too narrow at any screen size.
 
-### Steg 7. Testa på riktigt
+### Step 7. Test on a real device
 
-Öppna din sida på en riktig mobil (Live Server visar en nätverksadress, eller använd enhetsläget om du inte kan). Skriv vad du lade märke till.
+Open your page on a real phone (Live Server provides a network address, or use device mode if you cannot use a phone). Write down what you noticed.
 
-## Kontrollista: så vet du att du är klar
+## Checklist: how to know you are done
 
-- [ ] Viewport-metataggen finns i båda filerna.
-- [ ] Sidan fungerar utan horisontell scroll på 360 px.
-- [ ] Det finns minst två brytpunkter med `min-width` (mobile first).
-- [ ] Layouten ändras på ett vettigt sätt mellan mobil, mellanläge och desktop.
-- [ ] Du har testat i DevTools enhetsläge på minst tre bredder.
-- [ ] Du har pushat till din fork och skickat in länken.
+- [ ] The viewport meta tag is present in both files.
+- [ ] The page works without horizontal scrolling at 360 px.
+- [ ] There are at least two breakpoints using `min-width` (mobile first).
+- [ ] The layout adapts sensibly between mobile, medium-sized screens, and desktop.
+- [ ] You have tested in DevTools device mode at at least three widths.
+- [ ] You have pushed to your fork and submitted the link.
 
-## Tips om du fastnar
+## Tips if you get stuck
 
-- Horisontell scroll? Något element har fast bredd. Hitta det med DevTools: håll musen över elementen.
-- Media query verkar inte gälla? Kolla klamrarna och att den ligger EFTER grundreglerna i filen.
-- Brytpunkter ska bestämmas av när *innehållet* går sönder, inte av specifika enheter.
+- Horizontal scrolling? An element has a fixed width. Find it with DevTools by hovering over the elements.
+- A media query does not seem to apply? Check the braces and make sure it appears AFTER the base rules in the file.
+- Breakpoints should be determined by when the _content_ no longer fits properly, rather than by specific devices.
 
-## Inlämning
+## Submission
 
-**Deadline: imorgon klockan 09.00.** Allt lämnas in i Microsoft Forms. Du behöver inte redovisa något muntligt.
+**Deadline: tomorrow at 09:00.** Submit everything in Microsoft Forms. No oral presentation is required.
 
-I formuläret fyller du i:
+In the form, provide:
 
-1. Länk till din fork av det här repot.
-2. Reflektion: Vid vilken bredd gick din sida sönder först, och hur löste du det?
+1. A link to your fork of this repository.
+2. A reflection: At what width did your page's layout first break, and how did you fix it?
 
-## Vill du mer? (frivilligt)
+## Want to do more? (optional)
 
-- Lägg till en tredje brytpunkt vid 1200 px för stora skärmar.
-- Använd `clamp()` för att göra hero-rubriken flytande utan media query.
+- Add a third breakpoint at 1200 px for large screens.
+- Use `clamp()` to make the hero heading scale fluidly without a media query.
+
+## Responsive testing
+
+- At 360px: The page became narrower and the content looked cramped. But not that much of a difference i would say.
+- At 768px: The page got expanded and you can see two products from the meny list.
+- At 1280px: The page got bigger and wider and easier for the user to navigate.
+
+## Real device test
+
+I tested the page on my phone in portrait and landscape mode.
+The text was readable, the buttons were easy to tap, and the form fitted the screen. http://192.168.50.215:5500/index.html i used it to navigate trough my phone . i found it through the Live Server and i also wrote at the terminal "ipconfig".
